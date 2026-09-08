@@ -67,5 +67,290 @@
     <a href="contato.html">Contato</a>
 </nav>
 
+<div class="trilha" aria-label="Navegação estrutural">
+    <a href="index.html">Início</a>
+    >
+    <a href="guitarras.html">Guitarras</a>
+    >
+    <span aria-current="page">Guitarras Elétricas</span>
+</div>
 
+<main>
+
+    <div class="conteudo">
+
+        <h1>Loja de Instrumentos</h1>
+
+        <p>
+            Bem-vindo à nossa loja. Trabalhamos com
+            <strong>as melhores marcas</strong> do mercado e oferecemos
+            <em>garantia estendida</em> em todos os produtos.
+            Nossa nova <u>política de trocas</u> entrou em vigor neste mês.
+            Para saber mais,
+            <a href="politica.html">clique aqui</a>.
+        </p>
+
+        <section aria-labelledby="guitarras">
+            <h2 id="guitarras">Guitarras</h2>
+
+            <p>
+                Confira nossa linha completa de guitarras elétricas e acústicas.
+                Todos os modelos passam por revisão técnica antes do envio.
+                Veja o catálogo completo em PDF,
+                <a href="catalogo.pdf" target="_blank" rel="noopener">
+                    consulte o catálogo
+                </a>.
+            </p>
+
+            <h3>Guitarras Elétricas</h3>
+
+            <article class="cartao">
+                <h4>Stratocaster HSS</h4>
+                <p>R$ 4.290,00</p>
+
+                <button
+                    type="button"
+                    class="botao"
+                    onclick="adicionarCarrinho(101)">
+                    Adicionar ao carrinho
+                </button>
+            </article>
+
+            <article class="cartao">
+                <h4>Les Paul Standard</h4>
+                <p>R$ 7.150,00</p>
+
+                <button
+                    type="button"
+                    class="botao"
+                    onclick="adicionarCarrinho(102)">
+                    Adicionar ao carrinho
+                </button>
+            </article>
+        </section>
+
+        <section aria-labelledby="baterias">
+            <h2 id="baterias">Baterias</h2>
+
+            <p>
+                Kits acústicos e eletrônicos para estúdio e palco.
+                <a href="baterias.html">Saiba mais</a>.
+            </p>
+
+            <h3>Bateria Eletrônica</h3>
+
+            <p>
+                Modelos com pads de mesh e módulo de sons integrado.
+            </p>
+        </section>
+
+        <section aria-labelledby="categorias">
+            <h2 id="categorias">Categorias em destaque</h2>
+
+            <ul class="lista-categorias">
+                <li>Guitarras e Baixos</li>
+                <li>Baterias e Percussão</li>
+                <li>Teclados e Sintetizadores</li>
+                <li>Microfones</li>
+                <li>Acessórios</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="comparativo">
+            <h2 id="comparativo">Comparativo de modelos</h2>
+
+            <table>
+                <caption>Comparativo entre modelos de guitarras</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Captadores</th>
+                        <th scope="col">Escala</th>
+                        <th scope="col">Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Stratocaster HSS</th>
+                        <td>2 single + 1 humbucker</td>
+                        <td>648 mm</td>
+                        <td>R$ 4.290,00</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Les Paul Standard</th>
+                        <td>2 humbuckers</td>
+                        <td>628 mm</td>
+                        <td>R$ 7.150,00</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Telecaster Vintage</th>
+                        <td>2 single coil</td>
+                        <td>648 mm</td>
+                        <td>R$ 3.980,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="contato">
+            <h2 id="contato">Fale com um vendedor</h2>
+
+            <div class="aviso">
+                Os campos marcados com
+                <span aria-hidden="true">*</span>
+                são obrigatórios.
+            </div>
+
+            <form action="/enviar" method="post">
+
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">Nome completo *</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+
+                    <label for="email">E-mail *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                    <div class="erro" role="alert">
+                        Erro.
+                    </div>
+
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                    >
+
+                    <label for="senha">Senha *</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Crie uma senha"
+                        required
+                    >
+
+                    <div class="erro" role="alert">
+                        Erro.
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Turno preferido para contato *</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="turno"
+                            value="manha"
+                            required
+                        >
+                        Manhã
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="turno"
+                            value="tarde"
+                        >
+                        Tarde
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="turno"
+                            value="noite"
+                        >
+                        Noite
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Assuntos de interesse</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interesses[]"
+                            value="guitarras"
+                        >
+                        Guitarras
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interesses[]"
+                            value="baterias"
+                        >
+                        Baterias
+                    </label>
+
+                    <br>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interesses[]"
+                            value="teclados"
+                        >
+                        Teclados
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="botao">
+                    Enviar
+                </button>
+
+            </form>
+        </section>
+
+    </div>
+
+    <aside aria-labelledby="relacionado">
+        <h2 id="relacionado">Conteúdo relacionado</h2>
+
+        <p>
+            <a href="afinacao.html">Aprenda a afinar sua guitarra</a>.
+        </p>
+
+        <p>
+            <a href="manutencao.html">Saiba mais sobre manutenção de instrumentos</a>.
+        </p>
+
+        <p>
+            <a href="blog.html" target="_blank" rel="noopener">
+                Leia nosso blog
+            </a>.
+        </p>
+    </aside>
+
+</main> 
 
